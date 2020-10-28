@@ -17,7 +17,7 @@ const validForm = () => {
                 products
             }
 
-            sendData(JSON.stringify(objet))
+            sendData(objet)
 
         } else {
             alert(inputCheck.errorMessage)
@@ -29,22 +29,24 @@ const validForm = () => {
 }
     
 const sendData = (objetRequest) => {
-
-    (async () => {
-        console.log(objetRequest)
-
-        const rawResponse = await fetch('http://localhost:3000/api/furniture/order', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: objetRequest
-        });
-        const content = await rawResponse.json();
     
-        console.log(content);
-    })()
+    var data = new FormData();
+    data.append( "json", JSON.stringify( objetRequest ) );
+    
+    fetch("http://localhost:3000/api/furniture/order",
+    {
+        method: "POST",
+        body: data
+    })
+    .then(function(res) { 
+        return res.json()
+    })
+    .then(function(data) { 
+        console.log( JSON.stringify( data ) ) 
+    }).catch(error => {
+        console.log('mon erreur' + error)
+    })
+
 }
 
   //Fonction requet post de l'API
@@ -82,15 +84,6 @@ const sendData = (objetRequest) => {
 }
 
 
-// fetch('http://localhost:3000/api/furniture/')
-// .then(response => response.json())
-// .then(produits => {
-//     setUpProductArray(produits)
-// }).catch(error => {
-// const textError = document.createElement('p')
-// textError.textContent = "Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réessayer"
-// document.getElementById('cart_main').append(textError)
-// })
 
 
 
