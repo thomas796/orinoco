@@ -1,14 +1,22 @@
 {
-  "name": "site",
+  "name": "orinoco",
   "version": "1.0.0",
-  "description": "",
+  "description": "Thomas Perrier - projet 5 - open classrooms",
   "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.10"
+  },
   "scripts": {
     "sass": "sass --watch ./sass/style.scss:./css/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas796/orinoco.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.26.10"
-  }
+  "bugs": {
+    "url": "https://github.com/thomas796/orinoco/issues"
+  },
+  "homepage": "https://github.com/thomas796/orinoco#readme"
 }

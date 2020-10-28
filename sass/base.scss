@@ -1,7 +1,40 @@
-body {
-    background-color: yellow;
+
+$boxColor: rgb(248, 242, 242);
+
+html {
+    width: 100%;
+    margin: 0px;
 }
 
-#myTitle {
-    background-color: yellow;
+
+
+body {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
 }
+
+p {
+    font-family: arial;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+    color: black;
+}
+
+#productInCart {
+    color: red;
+    font-size: 1.1rem;
+    position: absolute;
+    left: calc(100% - 35px);
+    top: 13px;
+}
+
+
+
+

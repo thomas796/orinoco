@@ -1,0 +1,12 @@
+
+footer {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: calc(100% - 80px);
+    background-color: white;
+    box-shadow: 2px -2px 2px $boxColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

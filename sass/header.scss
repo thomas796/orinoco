@@ -1,3 +1,46 @@
-html {
-    background-color: blue;
+header {
+    background-color: white;
+    box-shadow: 2px 2px 2px $boxColor;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#header_logo {
+    position: absolute;
+    left: 0px;
+    width: 250px;
+    height: 100px;
+}
+
+#header_title {
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    color: gray;
+    margin: 0px;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#header_link {
+    position: absolute;
+    left: calc(100% - 150px);
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav__link:hover {
+    opacity: 0.5;
 }

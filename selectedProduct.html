@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Votre produit ORINOCO</title>
+	<meta name="description" content="ORINOCO est un site de vente en ligne d'ours en peluche, de meubles en bois et de caméras anciennes">
+</head>
+<body>
+    <header>
+		<img id="header_logo" src="img/orinocoLogo.png" alt="Logo d'Orinoco">
+		<p id="header_title">Meubles en bois</p>
+		<nav id="header_link">
+			<a href="index.html" class="nav__link">Accueil</a>
+			<a href="cart.html" class="nav__link">Panier</a>
+		</nav>
+		<h2 id='productInCart'></h2>
+	</header>
+
+	<section id='product_main'>
+
+		<h2 id='product_name'>Nom du produit</h2>
+
+		<section id='product_imgDataBlock'>
+			<img id='product_img' src="#" alt='image du produit'>
+			<section id='product_dataBlock'>
+				<p id='product_description_title'>Description :</p>
+				<p id='product_description'></p>
+				<p id='product_select'>Choisissez votre option : </p>
+				<select name='option' id='product_optionSelect'>
+					<option value=''>Faites votre choix</option>
+				</select>
+				<p id='product_price'></p>
+			</section>
+		</section>
+		<h2 id='product_add_animation'>produit ajouté au panier</h2>
+		<button onclick='addInCart()' id='product_addToCart'>Ajouter au panier</button> 
+	</section>
+
+	<footer>
+		<p>Site réalisé dans le cadre du projet 5, création d'un site de e-commerce, du parcours d'Openclassrooms par Thomas Perrier</p>
+    </footer>
+    
+        <script src='js/product.js'></script>
+		<script src="js/utilities.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+#confirm_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#confirm_logo {
+    margin: 50px;
+    width: 400px;
+    height: 175px;
+}
+
+#confirm_footer {
+    box-shadow: 2px -2px 2px transparent;
+}

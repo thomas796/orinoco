@@ -9,28 +9,26 @@
 </head>
 <body>
 	<header>
-		<h1 id="myTitle">heuu</h1>
-		<img class="topbar__logo" src="img/orinoco-logo.png" alt="Logo d'Orinoco">
-		<nav class="nav topbar__nav">
+		<img id="header_logo" src="img/orinocoLogo.png" alt="Logo d'Orinoco">
+		<p id="header_title">Meubles en bois</p>
+		<nav id="header_link">
 			<a href="index.html" class="nav__link">Accueil</a>
-			<a href="basket.html" class="nav__link"><i class="fas fa-shopping-basket"></i>Panier</a>
+			<a href="cart.html" class="nav__link">Panier</a>
 		</nav>
+		<h2 id='productInCart'></h2>
 	</header>
-	<main>
-		<div id="error">
-			<i id="error__logo" class="fas fa-exclamation-triangle"></i>
-			<p id="error__msg">Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réessayer</p>
-		</div>
-	</main>
+	
+	<section id='listProduct_main'>
+	</section>
+
 	<footer>
 		<p>Site réalisé dans le cadre du projet 5, création d'un site de e-commerce, du parcours d'Openclassrooms par Thomas Perrier</p>
 	</footer>
 
 
-	<!-- Scripts JS -->
-<!-- <script src="js/products.js"></script>
-	<script>
-		allProductsList()
-	</script> -->
+	<script src="js/list.js"></script>
+	<script src="js/utilities.js"></script>
+
+
 </body>
 </html>
