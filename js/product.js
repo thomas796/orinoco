@@ -56,11 +56,9 @@ function addInCart() {
 		localStorage.setItem("stockageCart",idProductJson);
 		document.getElementById('productInCart').textContent = idProductArray.length
 
-		console.log(idProductArray)
 		const animationAdd = document.getElementById('product_add_animation')
 		animationAdd.style.transitionDuration = '1s'
 		animationAdd.style.color = 'red'
-
 
 		setTimeout(function() {
 			animationAdd.style.color = 'transparent'
@@ -70,6 +68,7 @@ function addInCart() {
 		let idProductArray = [[idCart, value]]
 		let idProductJson = JSON.stringify(idProductArray)
 		localStorage.setItem("stockageCart",idProductJson)
+		document.getElementById('productInCart').textContent = 1
 	}
 }
 

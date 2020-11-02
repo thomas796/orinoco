@@ -2,19 +2,19 @@
 fetch('http://localhost:3000/api/furniture/')
 .then(response => response.json())
 .then(produits => {
-    setUpProductArray(produits)
+    setUpProductCartTable(produits)
 }).catch(error => {
 const textError = document.createElement('p')
 textError.textContent = "Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réessayer"
 document.getElementById('cart_main').append(textError)
 })
 
-function setUpProductArray(produits) {
+function setUpProductCartTable(produits) {
     const productArray = document.getElementById('cart_productArray')
     let idProductJson = localStorage.getItem("stockageCart");
     let idProductArray = JSON.parse(idProductJson);
 
-    let array = setUpTablePrice(idProductArray, produits)
+    let array = setUpProductCartArray(idProductArray, produits)
 
     if (array.length !== 2) {
 
@@ -106,10 +106,7 @@ function setUpProductArray(produits) {
 }
 
 
-
-
-
-const setUpTablePrice = (idProductArray, produits) => {
+const setUpProductCartArray = (idProductArray, produits) => {
     let array = []
     array.push(['', 'Vos Produits', 'Prix', '', ''])
 
