@@ -5,7 +5,7 @@ let defaultOptions = ''
 fetch('http://localhost:3000/api/furniture/'+location.search.substring(4))
 	.then(response => response.json())
 	.then(produit => {
-				detailProduit(produit)
+		detailProduit(produit)
 }).catch(error => {
 	const textError = document.createElement('p')
 	textError.textContent = "Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réessayer"
