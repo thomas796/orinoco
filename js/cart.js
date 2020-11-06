@@ -1,4 +1,4 @@
-
+//on crée la liste de produit
 fetch('http://localhost:3000/api/furniture/')
 .then(response => response.json())
 .then(produits => {
@@ -9,6 +9,7 @@ textError.textContent = "Désolé une erreur avec l'API est survenue, ou la page
 document.getElementById('cart_main').append(textError)
 })
 
+//Créer le tableau des produits du panier
 function setUpProductCartTable(produits) {
     const productArray = document.getElementById('cart_productArray')
     let idProductJson = localStorage.getItem("stockageCart");
@@ -105,7 +106,7 @@ function setUpProductCartTable(produits) {
     productArray.style.marginBottom = '30px'
 }
 
-
+//Récupérer dans le storage le tableau de produit du panier
 const setUpProductCartArray = (idProductArray, produits) => {
     let array = []
     array.push(['', 'Vos Produits', 'Prix', '', ''])
@@ -124,6 +125,7 @@ const setUpProductCartArray = (idProductArray, produits) => {
     return array
 }
 
+//calculer le prix total des produits
 const updatePrice = (array) => {
     let totalPrice = 0
     for (let i = 1; i < array.length; i++) {

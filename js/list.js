@@ -1,6 +1,6 @@
 
 
-	//on crée la liste de produit à vendre
+	//on récupère le tableau de la liste de produit à vendre
 	fetch("http://localhost:3000/api/furniture/") 
 		.then(response => response.json()) //il renvoie une promise
 		.then(produits => {
@@ -11,6 +11,7 @@
 		document.getElementById('listProduct_main').append(textError)
 	})
 
+	//on crée la liste de produit à vendre
 	async function allProductsList(produits) {
 
 		const productList = document.getElementById('listProduct_main')

@@ -1,20 +1,18 @@
 let idCart = ''
 let defaultOptions = ''
 
-fetch('http://localhost:3000/api/furniture/')
+//on crée la liste de produit à vendre
+fetch('http://localhost:3000/api/furniture/'+location.search.substring(4))
 	.then(response => response.json())
-	.then(produits => {
-		produits.forEach((produitSelected) => { 
-			if (produitSelected._id == location.search.substring(4)) {
-				detailProduit(produitSelected)
-			}
-		})
+	.then(produit => {
+				detailProduit(produit)
 }).catch(error => {
 	const textError = document.createElement('p')
 	textError.textContent = "Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réessayer"
 	document.getElementById('product_main').append(textError)
 })
 
+//on créé la vue présentant le produit
 async function detailProduit(produitSelected) {
 
 	idCart = produitSelected._id
@@ -40,6 +38,7 @@ async function detailProduit(produitSelected) {
 
 }
 
+//On ajoute le produit dans le panier lorsque l'utilisateur appui sur le bouton ajouter
 function addInCart() {
 	let value = document.getElementById('product_optionSelect').value
 	if (value === '') {

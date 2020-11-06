@@ -30,7 +30,7 @@ const validForm = () => {
 }
 
 
-
+//requete post pour envoyer la commande et recevoir le numéro de commande
 const sendData = (objetRequest, firstName) => {
     
     fetch("http://localhost:3000/api/furniture/order", {
@@ -50,6 +50,7 @@ const sendData = (objetRequest, firstName) => {
 
 }
 
+//lancer la page confirm order et mettre la commande dans le localStorage
 const goToConfirmOrder = (order, firstName) => {
 
     let idProductArray = []
@@ -102,15 +103,8 @@ const checkInput = () => {
 
 }
 
-//test 
-//on doit avoir un élément dans local storage 
-//on doit récupérer un tableau json avec l'id des produits et un message avec le tableau null
-//pour tester check cart on a un tableau avec 
-//option 2 : que le message est null
-//3 eme option
 
-//test mettre un local storage avec un produit, 2 produits et quel résultat attendu
-
+//Vérifier que le panier ne soit pas vide et renvoyer le tableau d'id des produits du panier
 const checkCart = () => {
 
     let idProductJson = localStorage.getItem("stockageCart");
